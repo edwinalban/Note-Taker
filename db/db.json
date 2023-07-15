@@ -1,0 +1,21 @@
+[
+    {
+        "title": "Test Title",
+        "text": "Test text"
+    },
+    {
+        "title": "Title",
+        "text": "whatever",
+        "uuid": "8a2a84c1-ed6f-4c95-8912-800334b21c37"
+    },
+    {
+        "title": "Title",
+        "text": "new note number 3",
+        "uuid": "f28fa9c0-4711-4fb2-821d-4a5390fb68eb"
+    },
+    {
+        "title": "Title",
+        "text": "whatever",
+        "uuid": "f7b885b5-99d1-49fb-a63d-ce940d730361"
+    }
+]

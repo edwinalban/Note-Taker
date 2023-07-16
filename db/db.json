@@ -17,5 +17,20 @@
         "title": "Title",
         "text": "whatever",
         "uuid": "f7b885b5-99d1-49fb-a63d-ce940d730361"
+    },
+    {
+        "title": "New Note",
+        "text": "Here it is",
+        "uuid": "b414b92e-379a-4109-9bf3-32a73afa94e7"
+    },
+    {
+        "title": "A new one",
+        "text": "here is a new note",
+        "uuid": "f898d9f1-f420-4a67-9e0e-c7ff6bcb7814"
+    },
+    {
+        "title": "Another New Note",
+        "text": "Here it is take two",
+        "uuid": "1abfec57-57f6-4882-b50e-0046db383427"
     }
 ]

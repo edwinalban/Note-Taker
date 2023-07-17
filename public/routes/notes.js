@@ -8,15 +8,15 @@ notes.get('/api/notes', (req, res) => {
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
-notes.get('/api/notes/:uuid', (req, res) => {
-    const requestedNote = req.params.uuid;
+// notes.get('/api/notes/:uuid', (req, res) => {
+//     const requestedNote = req.params.uuid;
 
-    for (let i = 0; i < data.length; i++) {
-        if (requestedNote === data[i].uuid) {
-            return res.json(data[i]);
-        };
-    };
-});
+//     for (let i = 0; i < data.length; i++) {
+//         if (requestedNote === data[i].uuid) {
+//             return res.json(data[i]);
+//         };
+//     };
+// });
 
 notes.post('/api/notes', (req, res) => {
     console.info(`${req.method} request received to submit note`);
@@ -27,7 +27,7 @@ notes.post('/api/notes', (req, res) => {
         const newPayload = {
             title,
             text,
-            uuid: uuidv4()
+            id: uuidv4()
         }
         readAndAppend(newPayload, './db/db.json');
 

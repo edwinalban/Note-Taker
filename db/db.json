@@ -1,36 +1,17 @@
 [
     {
-        "title": "Test Title",
-        "text": "Test text"
+        "title": "Fresh Start",
+        "text": "Check it out again",
+        "id": "de359da6-fa68-4033-8458-839b75ced2f8"
     },
     {
-        "title": "Title",
-        "text": "whatever",
-        "uuid": "8a2a84c1-ed6f-4c95-8912-800334b21c37"
+        "title": "Try her again",
+        "text": "Here we go",
+        "id": "f8fd93b7-625a-433d-8dec-c9cccec8ff47"
     },
     {
-        "title": "Title",
-        "text": "new note number 3",
-        "uuid": "f28fa9c0-4711-4fb2-821d-4a5390fb68eb"
-    },
-    {
-        "title": "Title",
-        "text": "whatever",
-        "uuid": "f7b885b5-99d1-49fb-a63d-ce940d730361"
-    },
-    {
-        "title": "New Note",
-        "text": "Here it is",
-        "uuid": "b414b92e-379a-4109-9bf3-32a73afa94e7"
-    },
-    {
-        "title": "A new one",
-        "text": "here is a new note",
-        "uuid": "f898d9f1-f420-4a67-9e0e-c7ff6bcb7814"
-    },
-    {
-        "title": "Another New Note",
-        "text": "Here it is take two",
-        "uuid": "1abfec57-57f6-4882-b50e-0046db383427"
+        "title": "Here is a new one",
+        "text": "Another note.",
+        "id": "00a53ee1-4b40-448f-9787-88ceafce0ab4"
     }
 ]

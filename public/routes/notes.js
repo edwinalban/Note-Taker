@@ -7,9 +7,11 @@ const { readFromFile, readAndAppend, writeToFile } = require('../../helpers/fsUt
 notes.get('/notes', (req, res) => {
     console.info(`${req.method} request received for notes`);
 
-    readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
+    readFromFile('./db/db.json')
+        .then((data) => res.json(JSON.parse(data)));
 });
 
+// Creates route to delete note after selected by unique id
 notes.delete('/notes/:id', (req, res) => {
     const requestedNote = req.params.id;
 
@@ -18,18 +20,12 @@ notes.delete('/notes/:id', (req, res) => {
         let filteredNotes = parsedNotes.filter((note) => {
             return note.id !== requestedNote
         })
-            return filteredNotes
+        return filteredNotes
     })
-    .then((filteredNotes) => {
-        writeToFile('./db/db.json', filteredNotes)
-    })
-    .then(() => res.json({message: "success"}))
-
-    // for (let i = 0; i < data.length; i++) {
-    //     if (requestedNote === data[i].id) {
-    //         return res.json(data[i]);
-    //     };
-    // };
+        .then((filteredNotes) => {
+            writeToFile('./db/db.json', filteredNotes)
+        })
+        .then(() => res.json({ message: "success" }))
 });
 
 // Creates route to allow updates to db.json file for new notes

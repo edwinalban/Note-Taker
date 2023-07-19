@@ -8,7 +8,7 @@ const app = express();
 
 // Allows app to use json, or urlencoded objects
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
 // Allows app to use the folders/files in the public folder
 app.use(express.static('public'));
@@ -17,7 +17,7 @@ app.use(express.static('public'));
 app.use('/api', api);
 
 // Creates route for notes.html file
-app.get('/notes', (req, res) => 
+app.get('/notes', (req, res) =>
     res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 

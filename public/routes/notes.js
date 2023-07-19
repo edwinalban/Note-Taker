@@ -1,23 +1,38 @@
+// Imports express, uuid, and functions from fsUtils.js in helpers folder
 const notes = require('express').Router();
 const { v4: uuidv4 } = require('uuid');
-const { readFromFile, readAndAppend } = require('../../helpers/fsUtils');
+const { readFromFile, readAndAppend, writeToFile } = require('../../helpers/fsUtils');
 
+// Creates route to allow db.json file to be read and parsed in order to return all saved notes
 notes.get('/notes', (req, res) => {
     console.info(`${req.method} request received for notes`);
 
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
-// notes.get('/api/notes/:uuid', (req, res) => {
-//     const requestedNote = req.params.uuid;
+notes.delete('/notes/:id', (req, res) => {
+    const requestedNote = req.params.id;
 
-//     for (let i = 0; i < data.length; i++) {
-//         if (requestedNote === data[i].uuid) {
-//             return res.json(data[i]);
-//         };
-//     };
-// });
+    readFromFile('./db/db.json').then((data) => {
+        let parsedNotes = JSON.parse(data);
+        let filteredNotes = parsedNotes.filter((note) => {
+            return note.id !== requestedNote
+        })
+            return filteredNotes
+    })
+    .then((filteredNotes) => {
+        writeToFile('./db/db.json', filteredNotes)
+    })
+    .then(() => res.json({message: "success"}))
 
+    // for (let i = 0; i < data.length; i++) {
+    //     if (requestedNote === data[i].id) {
+    //         return res.json(data[i]);
+    //     };
+    // };
+});
+
+// Creates route to allow updates to db.json file for new notes
 notes.post('/notes', (req, res) => {
     console.info(`${req.method} request received to submit note`);
 
@@ -42,4 +57,5 @@ notes.post('/notes', (req, res) => {
     }
 });
 
+// Exports routes for use in server.js file
 module.exports = notes;

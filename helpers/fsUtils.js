@@ -1,3 +1,4 @@
+// Imports fs and util
 const fs = require('fs');
 const util = require('util');
 
@@ -31,4 +32,5 @@ const readAndAppend = (content, file) => {
   });
 };
 
+// Exports functions to be used in notes.js file
 module.exports = { readFromFile, writeToFile, readAndAppend };

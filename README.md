@@ -7,7 +7,7 @@ I built this project in order to practice using Express.js. It solves the proble
 
 This project can be found here:
 
-https://basic-note-taker-1ebef20d0f5f.herokuapp.com/notes
+https://basic-note-taker-1ebef20d0f5f.herokuapp.com
 
 ## Table of Contents
 
